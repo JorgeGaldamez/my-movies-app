@@ -7,19 +7,20 @@ export const Listado = ({listadoState, setListadoState}) => {
 
     const [editar, setEditar] = useState(0);
     
+    
+    const conseguirPeliculas = () => {
+      let peliculas = JSON.parse(localStorage.getItem("movies"));
+      
+      setListadoState(peliculas);
+      
+      return peliculas;
+    }
+    
     useEffect(() => {
-        console.log("Componentes del listado de peliculas cargado!");
+        console.log("listado de peliculas cargado!");
         conseguirPeliculas();
     }, []);
-
-    const conseguirPeliculas = () => {
-        let peliculas = JSON.parse(localStorage.getItem("movies"));
-
-        setListadoState(peliculas);
-
-        return peliculas;
-    }
-
+    
     const borrarMovie = (id) => {
         // Conseguir peliculas almacenadas
         let movies_almacenadas = conseguirPeliculas();

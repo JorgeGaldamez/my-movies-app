@@ -30,7 +30,7 @@ export const Buscador = ({listadoState, setListadoState}) => {
     <div className="search">
         <h3 className="title">Buscador: {busqueda}</h3>
 
-        {(noEncontrado == true && busqueda.length > 3) && (
+        {(noEncontrado === true && busqueda.length > 3) && (
           <span className='no-encontrado'>No se ha encontrado ninguna coincidencia</span>
         )}
 
