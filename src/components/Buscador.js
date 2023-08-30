@@ -22,7 +22,7 @@ export const Buscador = ({listadoState, setListadoState}) => {
           setNoEncontrado(false);
       }
       
-      // Actualizar estado del listado principal con lo que logrado filtrar
+      // Actualizar estado del listado principal con lo que he logrado filtrar
       setListadoState(movies_encontradas);
   }
 
